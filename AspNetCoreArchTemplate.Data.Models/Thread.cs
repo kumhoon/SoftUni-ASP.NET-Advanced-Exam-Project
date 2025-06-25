@@ -9,6 +9,11 @@
         public string Title { get; set; } = null!;
 
         public string Content { get; set; } = null!;
+
+        public int ForumSectionId { get; set; }
+
+        public ForumSection ForumSection { get; set; } = null!;
+
         public string ThreadCreatorId { get; set; } = null!;
 
         public virtual IdentityUser ThreadCreator { get; set; } = null!;

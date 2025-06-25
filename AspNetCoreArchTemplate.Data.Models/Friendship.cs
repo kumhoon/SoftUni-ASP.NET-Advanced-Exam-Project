@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
-
-namespace AspNetCoreArchTemplate.Data.Models
+﻿namespace AspNetCoreArchTemplate.Data.Models
 {
+    using Microsoft.AspNetCore.Identity;
+
     public class Friendship
     {
         public int Id { get; set; }

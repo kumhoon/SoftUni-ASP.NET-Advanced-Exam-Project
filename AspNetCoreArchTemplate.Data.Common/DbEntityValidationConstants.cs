@@ -16,6 +16,14 @@ namespace AspNetCoreArchTemplate.Data.Common
         public static class Thread
         {
             public const int ThreadContentMaxLength = 4000;
+            public const int ThreadTitleMaxLength = 50;
+        }
+
+        public static class ForumSection
+        {
+            public const int ForumSectionNameMaxLength = 25;
+
+            public const int ForumSectionDescriptionMaxLength = 50;
         }
     }
 }

@@ -8,8 +8,16 @@
 
         public IdentityUser IdentityUser { get; set; } = null!;
 
-        public string ForumRank { get; set; } = null!;
+        public ForumRank ForumRank { get; set; }
         public int TotalPosts { get; set; }
         public int TotalComments { get; set; }
+    }
+
+    public enum ForumRank
+    {
+        Newbie,
+        Member,
+        Veteran,
+        Elite
     }
 }
