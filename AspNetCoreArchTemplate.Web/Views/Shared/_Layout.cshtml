@@ -15,9 +15,15 @@
                 <strong>ForumLogo</strong> - MyForum
             </div>
             <div class="user-links">
-                <a asp-page="/Register">Register</a> |
-                <a asp-page="/Login">Login</a> |
-                <a asp-page="/User/Profile">User View</a>
+                @if (User.Identity?.IsAuthenticated ?? false)
+                {
+                    <a asp-page="/User/Profile">User View</a>
+                }
+                else
+                {
+                    <a asp-area="Identity" asp-page="/Account/Register">Register</a>
+                    <a asp-area="Identity" asp-page="/Account/Login">Login</a>
+                }
             </div>
         </div>
         <div class="nav-links">
