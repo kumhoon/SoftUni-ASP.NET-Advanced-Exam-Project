@@ -3,8 +3,7 @@
     using Microsoft.AspNetCore.Identity;
 
     public class Friendship
-    {
-        public int Id { get; set; }
+    {  
         public string RequesterId { get; set; } = null!;
         public IdentityUser Requester { get; set; } = null!;
         public string AddresseeId { get; set; } = null!;

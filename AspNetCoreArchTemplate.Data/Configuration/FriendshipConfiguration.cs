@@ -9,7 +9,7 @@
         public void Configure(EntityTypeBuilder<Friendship> entity)
         {
             entity
-                .HasKey(f => f.Id);
+                .HasKey(f => new {f.RequesterId, f.AddresseeId});
 
             entity
                 .Property(f => f.RequestedAt)
