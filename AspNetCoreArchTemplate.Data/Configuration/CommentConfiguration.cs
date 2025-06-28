@@ -37,7 +37,9 @@
                 .HasForeignKey(c => c.ThreadId)
                 .OnDelete (DeleteBehavior.Restrict);
 
-
+            entity
+                .Property(c => c.CreatedOn)
+                .HasDefaultValueSql("GETUTCDATE()");
         }
     }
 }
